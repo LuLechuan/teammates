@@ -1,6 +1,49 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="t" %>
 <t:helpPage>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script>
+      $(function() {
+          $( "#faqToggle" ).click(function() {
+              $( "#faqs" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#editToggle" ).click(function() {
+              $( "#edits" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#sessionToggle" ).click(function() {
+              $( "#sessions" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#profileToggle" ).click(function() {
+              $( "#profile" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#searchToggle" ).click(function() {
+              $( "#search" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#sectionToggle" ).click(function() {
+              $( "#section" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#achieveToggle" ).click(function() {
+              $( "#achieve" ).toggle();
+          });
+      });
+      $(function() {
+          $( "#commentToggle" ).click(function() {
+              $( "#comments" ).toggle();
+          });
+      });
+  </script>
   <h1>Help for Instructors</h1>
   <a name="#top"></a>
   <div id="contentHolder">
@@ -11,7 +54,7 @@
       <li>
         <a href="#faq">Frequently Asked Questions
         </a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="faqs" style="margin: 0 auto; padding: 0 50px; display: none;">
           <ul>
             <li>
               <a href="#faq1">How do I view a list of students in a course?</a>
@@ -58,13 +101,15 @@
             </li>
           </ul>
         </div>
+        <a id="faqToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#tips">Tips for conducting 'team peer evaluation' sessions</a>
       </li>
       <li>
         <a href="#editCourse">Add/Edit instructors</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="edits" style="margin: 0 auto; padding: 0 50px; display: none;">
           <ul>
             <li>
               <a href="#editCourseAddInstructor">How do I add instructors to my course?</a>
@@ -80,10 +125,12 @@
             </li>
           </ul>
         </div>
+        <a id="editToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#sessionTypes">Sessions</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="sessions" style="margin: 0 auto; padding: 0 50px; display: none;" >
           <ul>
             <li>
               <a href="#fbSetupSession">Setting up a feedback session</a>
@@ -134,10 +181,12 @@
             </li>
           </ul>
         </div>
+        <a id="sessionToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#profiles">Profiles</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="profile" style="margin: 0 auto; padding: 0 50px; display: none;">
           <ul>
             <li>
               <a href="#viewStudentProfile">Viewing student profiles</a>
@@ -147,10 +196,12 @@
             </li>
           </ul>
         </div>
+        <a id="profileToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#search">Search</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="search" style="margin: 0 auto; padding: 0 50px; display: none">
           <ul>
             <li>
               <a href="#searchStudents">Searching for students</a>
@@ -160,10 +211,12 @@
             </li>
           </ul>
         </div>
+        <a id="searchToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#sections">Sections</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="section" style="margin: 0 auto; padding: 0 50px; display: none;">
           <ul>
             <li>
               <a href="#sectionsWhatIsItMeantFor">What are sections meant for?</a>
@@ -176,10 +229,12 @@
             </li>
           </ul>
         </div>
+        <a id="sectionToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#archiving">Archiving</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="archive" style="margin: 0 auto; padding: 0 50px; display: none;">
           <ul>
             <li>
               <a href="#archivingCourse">Archiving a course</a>
@@ -192,10 +247,12 @@
             </li>
           </ul>
         </div>
+        <a id="achieveToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
       <li>
         <a href="#editComments">Comments</a>
-        <div style="margin: 0 auto; padding: 0 50px;">
+        <div id="comments" style="margin: 0 auto; padding: 0 50px; display: none">
           <ul>
             <li>
               <a href="#addResponseComments">Create comments for response</a>
@@ -208,6 +265,8 @@
             </li>
           </ul>
         </div>
+        <a id="commentToggle" href="#"><font color="#d2691e">show/hide</font>
+        </a>
       </li>
     </ul>
   </div>
